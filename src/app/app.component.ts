@@ -1,10 +1,15 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  template: `
+    <app-title title="New Value"></app-title>
+    <router-outlet></router-outlet>
+  `,
 })
-export class AppComponent {
-  title = 'meu-primeiro-projeto';
+export class AppComponent implements OnInit{
+  contructor() {}
+
+  ngOnInit(): void {}
+
 }
