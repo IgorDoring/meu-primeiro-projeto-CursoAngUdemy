@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-title',
@@ -7,7 +7,7 @@ import { Component, Input } from '@angular/core';
 })
 export class TitleComponent{
 
-  @Input() public title:string = "Hello World!";
+  public title:string = "Hello World!";
 
   ngOnInit(): void{
     console.log("Title Component Initialiazed");
@@ -16,5 +16,8 @@ export class TitleComponent{
   ngOnChanges(): void{ 
     console.log("Title New Data");
   }
-  
+
+  ngOnDestroy(): void{
+    console.log("Title component Destroyed");
+  }
 }
