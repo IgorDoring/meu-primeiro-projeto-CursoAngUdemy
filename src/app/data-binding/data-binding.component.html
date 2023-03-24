@@ -1,6 +1,18 @@
+<style>
+	body{
+		background-color: #d2d2d2;
+	}
+</style>
+
 <h2>Interpolation</h2>
 
 <p>{{ nome + sobrenome }}, tem {{ idade }} anos.</p>
 <p>Você é maior de 18? {{ idade >= 18 }}</p>
 
 <p>Quanto falta até os 30? {{ 30 - idade }}</p>
+
+<hr>
+
+<h2>Property Binding</h2>
+<button [disabled]="disabledCheck">Botao</button>
+<img [src]="imgSrc" alt="logo uni" style="width: 100px;">
