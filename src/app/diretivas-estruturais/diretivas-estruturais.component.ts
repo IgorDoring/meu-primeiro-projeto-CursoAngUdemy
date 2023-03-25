@@ -27,5 +27,9 @@ export class DiretivasEstruturaisComponent {
   onClickEvent(event: number): void{
     this.list.splice(event, 1);
   }
+
+  // ngSwitch
+  nome: string = "placeholder";
+
 }
  

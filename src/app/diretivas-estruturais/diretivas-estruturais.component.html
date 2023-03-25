@@ -9,3 +9,18 @@
 </ul>
 
 <button (click)="onClickAddList()">Add</button>
+
+<hr>
+
+<input type="text" name="nome" [(ngModel)]="nome">
+<div [ngSwitch]="nome">
+	<p *ngSwitchCase="'Dragon Ball'">
+		Goku 
+	</p>
+	<p *ngSwitchCase="'Naruto'">
+		Naruto 
+	</p>
+	<p *ngSwitchDefault>
+		Digite um anime
+	</p>
+</div>
