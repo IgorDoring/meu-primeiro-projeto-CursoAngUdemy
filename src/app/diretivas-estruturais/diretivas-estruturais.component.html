@@ -1,3 +1,11 @@
 <h2 *ngIf="condition">Diretiva ngIf</h2>
 <p>Condição atual: {{ condition }}</p>
 <button (click)="changeCondition()">Mudar condicao para {{ !condition }}</button>
+
+<hr>
+
+<ul>
+	<li *ngFor="let item of list; index as i" (click)="onClickEvent(i)" >[{{ i }}] - {{ item.nome }}, {{ item.descricao }}</li>
+</ul>
+
+<button (click)="onClickAddList()">Add</button>
