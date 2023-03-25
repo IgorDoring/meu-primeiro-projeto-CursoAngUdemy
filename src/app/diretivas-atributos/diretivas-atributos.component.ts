@@ -23,4 +23,7 @@ export class DiretivasAtributosComponent {
       }
     }, 100);
   }
+
+  // ng-template
+  list: any = [{nome: "asdasd"}]
 }

@@ -2,4 +2,16 @@
 <p (click)="changeValor(valor)" [ngClass]="{'active': valor, 'disabled': !valor}">Lorem ipsum</p>
 <hr>
 <h2>ngStyle</h2>
-<p [ngStyle]="{'height': paraHeight+'px'}" [ngClass]="{'active': valor, 'disabled': !valor}">Lorem ipsum</p>
+<!-- <p [ngStyle]="{'height': paraHeight+'px'}" [ngClass]="{'active': valor, 'disabled': !valor}">Lorem ipsum</p> -->
+
+<ng-template [ngIf]="true">
+	<p>
+		True
+	</p>
+</ng-template>
+
+<ng-template ngFor let-item [ngForOf]="list">
+	<p>
+		{{ item.nome }}
+	</p>
+</ng-template>
