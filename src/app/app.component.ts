@@ -3,7 +3,7 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'app-root',
   template: `
-  <app-diretivas-atributos><h1>Aulas de Diretiva Atributo</h1> <h3>Fim da Aula</h3></app-diretivas-atributos>
+  <app-new-component></app-new-component>
     <router-outlet></router-outlet>
   `,
 })
