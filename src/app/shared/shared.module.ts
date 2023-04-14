@@ -4,6 +4,9 @@ import { NewComponentComponent } from './new-component/new-component.component';
 import { InputComponent } from './input/input.component';
 import { OutputComponent } from './output/output.component';
 import { FoodListComponent } from './food-list/food-list.component';
+import { FoodAddComponent } from './food-add/food-add.component';
+import {HttpClientModule} from "@angular/common/http";
+import {FormsModule} from "@angular/forms";
 
 
 
@@ -12,16 +15,20 @@ import { FoodListComponent } from './food-list/food-list.component';
     NewComponentComponent,
     InputComponent,
     OutputComponent,
-    FoodListComponent
+    FoodListComponent,
+    FoodAddComponent
   ],
   exports: [
     NewComponentComponent,
     InputComponent,
     OutputComponent,
-    FoodListComponent
+    FoodListComponent,
+    FoodAddComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    HttpClientModule,
+    FormsModule
   ]
 })
 export class SharedModule { }
