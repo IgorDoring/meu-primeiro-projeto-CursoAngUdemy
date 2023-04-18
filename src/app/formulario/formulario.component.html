@@ -1,0 +1,28 @@
+<form (ngSubmit)="enviarDados(formulario)" #formulario="ngForm">
+  <label >Nome: </label>
+  <input [ngClass]="{'valid': nome.valid, 'invalid': nome.invalid}" type="text" name="nome" #nome="ngModel" [ngModel]="nome.value" required>
+  <br><br>
+  <label >Masculino: </label>
+  <input type="radio" name="sexo" value="Masc" ngModel>
+  <br>
+  <label >Feminino: </label>
+  <input type="radio" name="sexo" value="Femi" ngModel>
+  <br><br>
+  <label >Angular: </label>
+  <input type="checkbox" name="angular" ngModel>
+  <br>
+  <label >React: </label>
+  <input type="checkbox" name="react" ngModel>
+  <br>
+  <label >Vue.js: </label>
+  <input type="checkbox" name="vue.js" ngModel>
+  <br><br>
+  <select name="comidas" ngModel>
+    <option value="">Selecione um alimento</option>
+    <option *ngFor="let food of foods;" [value]="food">{{ food }}</option>
+  </select>
+  <br><br>
+  <button type="submit" [disabled]="formulario.invalid">Enviar dados</button>
+</form>
+
+{{ formulario.value | json }}
